@@ -13,7 +13,7 @@ elif rand_num == 2:
     computer = "scissors"
 
 
-player = input("Player, play your move: ")
+player = input("Player, play your move: ").lower()
 print("The computer played: ", computer)
 
 if player == computer: 
