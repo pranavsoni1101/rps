@@ -5,23 +5,27 @@ print("......Scissors......")
 player1 = input("Player 1, play your move ")
 player2 = input("Player 2, play your move ")
 
-# Logic for the rock 
-if player1 == "rock" and player2 == "scissors" :
-    print("Player 1 wins")
-elif player1  == "rock" and player2 == "paper":
-    print("Player 2 wins")
+# Tie breaker
+if player1 == player2: 
+    print("A Tie")
+# Logic for rock
+elif player1 == "rock" :
+    if player2 == "scissors":
+        print("Player 1 wins")
+    elif player2 == "paper": 
+        print("Player 2 wins")
 # Logic for the paper
-elif player1 == "paper" and player2 == "scissors" :
-    print("Player 2 wins")
-elif player1  == "paper" and player2 == "rock":
-    print("Player 1 wins")
-# Logic for the scissors
-elif player1 == "scissors" and player2 == "rock" :
-    print("Player 2 wins")
-elif player1  == "scissors" and player2 == "paper":
-    print("Player 1 wins")
-# If both player1 and player 2 are equal
-elif player1 == player2:
-    print("A DRAW")
-else:
-    print("Oops cannot read")
+elif player1 == "paper" :
+    if player2 == "rock": 
+        print("Player 1 wins")
+    elif player2 == "scissors":
+        print("Player 2 wins")
+# Logic for scissors
+elif player1 == "paper" :
+    if player2 == "rock": 
+        print("Player 1 wins")
+    elif player2 == "scissors":
+        print("Player 2 wins")
+
+else: 
+    print("Meh i don't get it")
